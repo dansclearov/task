@@ -1,12 +1,12 @@
 FROM python:3
 
 RUN groupadd --gid 1000 user \
-    && useradd --uid 1000 --gid user --shell /bin/bash
+    && useradd --uid 1000 --gid user --shell /bin/bash --create-home user
 
 ENV PYTHONUNBUFFERED=1
 
-WORKDIR /task
-COPY requirements.txt /task/
+WORKDIR /home/user/task
+COPY requirements.txt /home/user/task/
 
 RUN pip install -r requirements.txt
-COPY . /task
+COPY . /home/user/task
