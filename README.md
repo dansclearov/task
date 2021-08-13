@@ -10,6 +10,7 @@ python manage.py createsuperuser
 ### Optional features done:
 - JWT authentification
 - Docker image
+- Swagger (openapi schema)
 
 ### _Notes_:
 - I used docker so there is no need for a virtual environment
